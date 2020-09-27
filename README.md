@@ -1,5 +1,5 @@
 # NodeRed-SQL-Connector
-Przykład aplikacji stworzonej w środowisku Node-Red, do realizacji wymiany danych pomiędzy sterownikiem SIMATIC S7 i baza danych MySQL. Wspierane są wszystkie sterowniki obsługujące protokół komunikacyjny S7 (S7-300/400/1200/1500).
+Przykład aplikacji stworzonej w środowisku Node-Red, do realizacji wymiany danych pomiędzy sterownikiem SIMATIC S7 i baza danych MySQL. Wspierane są wszystkie sterowniki obsługujące protokół komunikacyjny S7 (SIMATIC S7-300/400/1200/1500).
 
 ## Opis aplikacji
 Aplikacja wykorzystuje protokół komunikacyjny S7 do komunikacji ze sterownikami PLC. Odczytane w ten sposób wartości mogą być zapisane do bazy danych MySQL. W przypadku utraty połączenia z serwerem SQL, dane gromadzone są w buforze generowanym w postaci pliku TXT. Połączenie to jest monitorowane co 5s, a bufor przepisywany jest do bazy maksymalnie z 15-minutowym opóźnieniem.
@@ -40,13 +40,13 @@ Parametry komunikacyjne oraz listę zmiennych można dostosować klikając na je
 
 W wyświetlonym oknie w zakładce *Connections* należy dostosować przede wszystkim adres IP sterownika oraz czas cyklu odczytu zmiennych.
 
-![Edycja parametrów PLC](Images/img_4.pmg)
+![Edycja parametrów połączenia z PLC](Images/img_4.png)
 
 W zakładce *Variables* należy zdefiniować listę zmiennych czytanych ze sterownika PLC. Zmienna definiowana jest poprzez adres absolutny w sterowniku oraz nazwę symboliczną (wykorzystywaną jedynie w Node-Red - nie musi być to nazwa identyczna jak w PLC). Sposób definiowania adresów zmiennych opisany jest bardziej szczegółowo w dokumentacji do funkcji [node-red-contrib-s7](https://flows.nodered.org/node/node-red-contrib-s7).
 
 **Aby możliwy był odczyt zmiennych ze sterowników S7-1200/1500 konieczne jest wyłączenie optymalizacji bloków danych oraz włączenie parametru "Permit access with PUT/GET..." w ustawieniach sterownika w zakładce "Protection"**
 
-![Edycja listy zmiennych PLC](Images/img_5.pmg)
+![Edycja listy zmiennych PLC](Images/img_5.png)
 
 ### Parametry połączenia z bazą SQL
 Parametry połączenia z bazą SQL można dostosować klikając na blok *Database*, a nastepnie na ikonę ołówka przy nazwie bazy danych.
