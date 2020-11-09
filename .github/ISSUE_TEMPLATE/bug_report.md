@@ -1,5 +1,5 @@
 ---
-name: Bug report
+name: Zgłoszenie błędu
 about: Zgłoś błąd w projekcie
 title: "[BUG]"
 labels: ''
