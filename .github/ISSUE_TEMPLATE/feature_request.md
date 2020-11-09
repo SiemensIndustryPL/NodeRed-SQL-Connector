@@ -1,5 +1,5 @@
 ---
-name: Feature request
+name: Propozycja zmian
 about: Zaproponuj zmiany w projekcie
 title: "[REQUEST]"
 labels: ''
